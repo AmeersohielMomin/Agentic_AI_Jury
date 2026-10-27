@@ -1,4 +1,4 @@
-# Agentic AI Jury: Study Schedule Optimizer (Topic 8)
+# Agentic AI Jury: Study Schedule Optimizer 
 
 Autonomous multi-agent system and deterministic tool-calling framework for exam readiness assessment and dynamic study workload scheduling.
 
