@@ -1,0 +1,74 @@
+=== EV: 5 Benchmark Test Cases on TA2 Extended Multi-Agent System ===
+
+[TC1] Fully Prepared Student
+Latency: 40.88 ms | Hops: 3 | Negotiation: AGREED
+Final Schedule:
+============================================================
+🎓 MULTI-AGENT FINAL STUDY OPTIMIZATION PLAN
+============================================================
+Student: Alice Smith (User ID: student_alice)
+Subject: Academic Exam
+Readiness Assessment: ready (20/20 topics covered, 100.0%).
+Calculated Daily Workload: 0.00 study hours per day (0 remaining topics × 2 hrs ÷ 5 days).
+Institutional Policy Ref: Section 1: Standard Exam Readiness Benchmark Section 5: Core Topic Weightage and Priority Catalog
+Multi-Agent Negotiation Status: AGREED
+============================================================
+
+[TC2] Borderline Readiness
+Latency: 21.18 ms | Hops: 3 | Negotiation: AGREED
+Final Schedule:
+============================================================
+🎓 MULTI-AGENT FINAL STUDY OPTIMIZATION PLAN
+============================================================
+Student: Bob Vance (User ID: student_bob)
+Subject: Academic Exam
+Readiness Assessment: ready (16/20 topics covered, 80.0%).
+Calculated Daily Workload: 1.50 study hours per day (4 remaining topics × 1.5 hrs ÷ 4 days).
+Institutional Policy Ref: Section 1: Standard Exam Readiness Benchmark Section 5: Core Topic Weightage and Priority Catalog
+Multi-Agent Negotiation Status: AGREED
+============================================================
+
+[TC3] Urgent Catch-up Crunch
+Latency: 22.66 ms | Hops: 3 | Negotiation: COUNTERED
+Final Schedule:
+============================================================
+🎓 MULTI-AGENT FINAL STUDY OPTIMIZATION PLAN
+============================================================
+Student: Charlie Day (User ID: student_charlie)
+Subject: Academic Exam
+Readiness Assessment: not ready yet (5/12 topics covered, 41.7%).
+Calculated Daily Workload: 5.25 study hours per day (7 remaining topics × 1.5 hrs ÷ 2 days).
+Institutional Policy Ref: Section 1: Standard Exam Readiness Benchmark Section 5: Core Topic Weightage and Priority Catalog
+Multi-Agent Negotiation Status: COUNTERED
+Human Oversight Decision: REJECTED
+Note: Intensive schedule was REJECTED by human oversight. Student advised to request syllabus extension.
+============================================================
+
+[TC4] Extreme Workload Overload
+Latency: 21.51 ms | Hops: 3 | Negotiation: FAILED
+Final Schedule:
+============================================================
+🎓 MULTI-AGENT FINAL STUDY OPTIMIZATION PLAN
+============================================================
+Student: Charlie Day (User ID: student_charlie)
+Subject: Academic Exam
+Readiness Assessment: not ready yet (2/20 topics covered, 10.0%).
+Calculated Daily Workload: Unfeasible Schedule Warning: Required 45.00 hours/day exceeds maximum biological limit of 12.0 hours/day.
+Institutional Policy Ref: Section 1: Standard Exam Readiness Benchmark Section 5: Core Topic Weightage and Priority Catalog
+Multi-Agent Negotiation Status: FAILED
+============================================================
+
+[TC5] Boundary / Zero Days Left
+Latency: 24.66 ms | Hops: 3 | Negotiation: FAILED
+Final Schedule:
+============================================================
+🎓 MULTI-AGENT FINAL STUDY OPTIMIZATION PLAN
+============================================================
+Student: Bob Vance (User ID: student_bob)
+Subject: Academic Exam
+Readiness Assessment: not ready yet (10/20 topics covered, 50.0%).
+Calculated Daily Workload: Error: days_left must be >= 1 day (received 0). Examination is today or overdue.
+Institutional Policy Ref: Section 1: Standard Exam Readiness Benchmark Section 5: Core Topic Weightage and Priority Catalog
+Multi-Agent Negotiation Status: FAILED
+============================================================
+

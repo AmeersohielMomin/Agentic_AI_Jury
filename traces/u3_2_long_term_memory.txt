@@ -1,0 +1,27 @@
+=== U3-2: Long-term Memory (SQLite Namespace & Process Restart) ===
+
+User ID: student_eva
+Namespace: (student_eva, 'profile')
+Restart Persistence Verified: True
+
+Initial Stored Profile (Session 1):
+{
+  "name": "Eva Rostova",
+  "target_subject": "Advanced Agentic AI & RAG",
+  "daily_max_hours": 4.5,
+  "burnout_threshold": 4.0,
+  "pace_multiplier": 1.15,
+  "preferred_study_time": "early_morning",
+  "notes": "Prefers 45-min Pomodoro cycles with short intervals."
+}
+
+Recalled Profile After Process Restart (Session 2):
+{
+  "burnout_threshold": 4.0,
+  "daily_max_hours": 4.5,
+  "name": "Eva Rostova",
+  "notes": "Prefers 45-min Pomodoro cycles with short intervals.",
+  "pace_multiplier": 1.15,
+  "preferred_study_time": "early_morning",
+  "target_subject": "Advanced Agentic AI & RAG"
+}

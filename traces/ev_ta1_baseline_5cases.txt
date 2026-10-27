@@ -1,0 +1,22 @@
+=== EV: 5 Benchmark Test Cases on TA1 Baseline ===
+
+[TC1] Fully Prepared Student
+Latency: 0.02 ms | Crashed: False
+Result: ready (20/20 topics covered, 100.0%). | 0.00 study hours per day (0 remaining topics × 2 hours/topic ÷ 5 days).
+
+[TC2] Borderline Readiness
+Latency: 0.01 ms | Crashed: False
+Result: ready (16/20 topics covered, 80.0%). | 1.50 study hours per day (4 remaining topics × 1.5 hours/topic ÷ 4 days).
+
+[TC3] Urgent Catch-up Crunch
+Latency: 0.00 ms | Crashed: False
+Result: not ready yet (5/12 topics covered, 41.7%). | 5.25 study hours per day (7 remaining topics × 1.5 hours/topic ÷ 2 days).
+
+[TC4] Extreme Workload Overload
+Latency: 0.00 ms | Crashed: False
+Result: not ready yet (2/20 topics covered, 10.0%). | 45.00 study hours per day (18 remaining topics × 2.5 hours/topic ÷ 1 days).
+
+[TC5] Boundary / Zero Days Left
+Latency: 0.01 ms | Crashed: True
+Result: Hours Error: days_left must be greater than zero
+

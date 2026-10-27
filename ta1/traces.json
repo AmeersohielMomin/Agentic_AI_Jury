@@ -1,0 +1,236 @@
+{
+  "one_tool": {
+    "question": "I covered 18 of 20 topics. Am I exam ready?",
+    "model": "qwen2.5-coder:3b",
+    "tool_events": [
+      {
+        "name": "check_exam_readiness",
+        "arguments": {
+          "topics_covered": 18,
+          "total_topics": 20
+        },
+        "result": "ready (18/20 topics covered, 90.0%)."
+      }
+    ],
+    "message_trace": [
+      {
+        "step": "model",
+        "tool_calls": [
+          {
+            "name": "readiness_tool"
+          }
+        ],
+        "compatibility_note": "The model emitted JSON tool requests as text; the runner executed the registered Python tools explicitly."
+      },
+      {
+        "step": "tool",
+        "name": "readiness_tool",
+        "content": "ready (18/20 topics covered, 90.0%)."
+      },
+      {
+        "step": "model",
+        "tool_calls": [],
+        "content": "ready (18/20 topics covered, 90.0%)."
+      }
+    ],
+    "final_answer": "ready (18/20 topics covered, 90.0%)."
+  },
+  "two_tool": {
+    "question": "I covered 14 of 20 topics and have 3 days left. Assuming 2 hours per topic, am I exam ready and how many study hours per day should I plan?",
+    "model": "qwen2.5-coder:3b",
+    "tool_events": [
+      {
+        "name": "check_exam_readiness",
+        "arguments": {
+          "topics_covered": 14,
+          "total_topics": 20
+        },
+        "result": "not ready yet (14/20 topics covered, 70.0%)."
+      },
+      {
+        "name": "hours_needed_per_day",
+        "arguments": {
+          "remaining_topics": 6,
+          "days_left": 3,
+          "hours_per_topic": 2
+        },
+        "result": "4.00 study hours per day (6 remaining topics \u00d7 2 hours/topic \u00f7 3 days)."
+      }
+    ],
+    "message_trace": [
+      {
+        "step": "model",
+        "tool_calls": [
+          {
+            "name": "readiness_tool"
+          },
+          {
+            "name": "daily_hours_tool"
+          }
+        ],
+        "compatibility_note": "The model emitted JSON tool requests as text; the runner executed the registered Python tools explicitly."
+      },
+      {
+        "step": "tool",
+        "name": "readiness_tool",
+        "content": "not ready yet (14/20 topics covered, 70.0%)."
+      },
+      {
+        "step": "tool",
+        "name": "daily_hours_tool",
+        "content": "4.00 study hours per day (6 remaining topics \u00d7 2 hours/topic \u00f7 3 days)."
+      },
+      {
+        "step": "model",
+        "tool_calls": [],
+        "content": "not ready yet (14/20 topics covered, 70.0%). 4.00 study hours per day (6 remaining topics \u00d7 2 hours/topic \u00f7 3 days)."
+      }
+    ],
+    "final_answer": "not ready yet (14/20 topics covered, 70.0%). 4.00 study hours per day (6 remaining topics \u00d7 2 hours/topic \u00f7 3 days)."
+  },
+  "examples": {
+    "Fully prepared student": {
+      "question": "I covered 20 of 20 topics, have 5 days left, and need 2 hours per topic. Am I ready, and how many hours per day should I study?",
+      "model": "qwen2.5-coder:3b",
+      "tool_events": [
+        {
+          "name": "check_exam_readiness",
+          "arguments": {
+            "topics_covered": 20,
+            "total_topics": 20
+          },
+          "result": "ready (20/20 topics covered, 100.0%)."
+        },
+        {
+          "name": "hours_needed_per_day",
+          "arguments": {
+            "remaining_topics": 0,
+            "days_left": 5,
+            "hours_per_topic": 2
+          },
+          "result": "0.00 study hours per day (0 remaining topics \u00d7 2 hours/topic \u00f7 5 days)."
+        }
+      ],
+      "message_trace": [
+        {
+          "step": "model",
+          "tool_calls": [
+            {
+              "name": "readiness_tool"
+            },
+            {
+              "name": "daily_hours_tool"
+            }
+          ],
+          "compatibility_note": "The model emitted JSON tool requests as text; the runner executed the registered Python tools explicitly."
+        },
+        {
+          "step": "tool",
+          "name": "readiness_tool",
+          "content": "ready (20/20 topics covered, 100.0%)."
+        },
+        {
+          "step": "tool",
+          "name": "daily_hours_tool",
+          "content": "0.00 study hours per day (0 remaining topics \u00d7 2 hours/topic \u00f7 5 days)."
+        },
+        {
+          "step": "model",
+          "tool_calls": [],
+          "content": "ready (20/20 topics covered, 100.0%). 0.00 study hours per day (0 remaining topics \u00d7 2 hours/topic \u00f7 5 days)."
+        }
+      ],
+      "final_answer": "ready (20/20 topics covered, 100.0%). 0.00 study hours per day (0 remaining topics \u00d7 2 hours/topic \u00f7 5 days)."
+    },
+    "Borderline readiness": {
+      "question": "I covered 16 of 20 topics, have 4 days left, and need 1.5 hours per topic. Am I ready, and how many hours per day should I study?",
+      "model": "qwen2.5-coder:3b",
+      "tool_events": [
+        {
+          "name": "hours_needed_per_day",
+          "arguments": {
+            "remaining_topics": 4,
+            "days_left": 4,
+            "hours_per_topic": 1.5
+          },
+          "result": "1.50 study hours per day (4 remaining topics \u00d7 1.5 hours/topic \u00f7 4 days)."
+        }
+      ],
+      "message_trace": [
+        {
+          "step": "model",
+          "tool_calls": [
+            {
+              "name": "daily_hours_tool"
+            }
+          ],
+          "compatibility_note": "The model emitted JSON tool requests as text; the runner executed the registered Python tools explicitly."
+        },
+        {
+          "step": "tool",
+          "name": "daily_hours_tool",
+          "content": "1.50 study hours per day (4 remaining topics \u00d7 1.5 hours/topic \u00f7 4 days)."
+        },
+        {
+          "step": "model",
+          "tool_calls": [],
+          "content": "1.50 study hours per day (4 remaining topics \u00d7 1.5 hours/topic \u00f7 4 days)."
+        }
+      ],
+      "final_answer": "1.50 study hours per day (4 remaining topics \u00d7 1.5 hours/topic \u00f7 4 days)."
+    },
+    "Urgent catch-up plan": {
+      "question": "I covered 5 of 12 topics, have 2 days left, and need 1.5 hours per topic. Am I ready, and how many hours per day should I study?",
+      "model": "qwen2.5-coder:3b",
+      "tool_events": [
+        {
+          "name": "check_exam_readiness",
+          "arguments": {
+            "topics_covered": 5,
+            "total_topics": 12
+          },
+          "result": "not ready yet (5/12 topics covered, 41.7%)."
+        },
+        {
+          "name": "hours_needed_per_day",
+          "arguments": {
+            "remaining_topics": 7,
+            "days_left": 2,
+            "hours_per_topic": 1.5
+          },
+          "result": "5.25 study hours per day (7 remaining topics \u00d7 1.5 hours/topic \u00f7 2 days)."
+        }
+      ],
+      "message_trace": [
+        {
+          "step": "model",
+          "tool_calls": [
+            {
+              "name": "readiness_tool"
+            },
+            {
+              "name": "daily_hours_tool"
+            }
+          ],
+          "compatibility_note": "The model emitted JSON tool requests as text; the runner executed the registered Python tools explicitly."
+        },
+        {
+          "step": "tool",
+          "name": "readiness_tool",
+          "content": "not ready yet (5/12 topics covered, 41.7%)."
+        },
+        {
+          "step": "tool",
+          "name": "daily_hours_tool",
+          "content": "5.25 study hours per day (7 remaining topics \u00d7 1.5 hours/topic \u00f7 2 days)."
+        },
+        {
+          "step": "model",
+          "tool_calls": [],
+          "content": "not ready yet (5/12 topics covered, 41.7%). 5.25 study hours per day (7 remaining topics \u00d7 1.5 hours/topic \u00f7 2 days)."
+        }
+      ],
+      "final_answer": "not ready yet (5/12 topics covered, 41.7%). 5.25 study hours per day (7 remaining topics \u00d7 1.5 hours/topic \u00f7 2 days)."
+    }
+  }
+}

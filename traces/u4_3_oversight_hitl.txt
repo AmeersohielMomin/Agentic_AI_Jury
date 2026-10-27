@@ -1,0 +1,29 @@
+=== U4-3: Human Oversight Dual Path (Approved vs Rejected) ===
+
+--- PATH A: HUMAN APPROVED ---
+============================================================
+🎓 MULTI-AGENT FINAL STUDY OPTIMIZATION PLAN
+============================================================
+Student: Alice Smith (User ID: student_alice)
+Subject: AI Exam
+Readiness Assessment: not ready yet (10/20 topics covered, 50.0%).
+Calculated Daily Workload: 10.00 study hours per day (10 remaining topics × 2 hrs ÷ 2 days).
+Institutional Policy Ref: Section 1: Standard Exam Readiness Benchmark Section 5: Core Topic Weightage and Priority Catalog
+Multi-Agent Negotiation Status: COUNTERED
+Human Oversight Decision: APPROVED
+Note: Intensive schedule was formally APPROVED by human oversight.
+============================================================
+
+--- PATH B: HUMAN REJECTED ---
+============================================================
+🎓 MULTI-AGENT FINAL STUDY OPTIMIZATION PLAN
+============================================================
+Student: Alice Smith (User ID: student_alice)
+Subject: AI Exam
+Readiness Assessment: not ready yet (10/20 topics covered, 50.0%).
+Calculated Daily Workload: 10.00 study hours per day (10 remaining topics × 2 hrs ÷ 2 days).
+Institutional Policy Ref: Section 1: Standard Exam Readiness Benchmark Section 5: Core Topic Weightage and Priority Catalog
+Multi-Agent Negotiation Status: COUNTERED
+Human Oversight Decision: REJECTED
+Note: Intensive schedule was REJECTED by human oversight. Student advised to request syllabus extension.
+============================================================

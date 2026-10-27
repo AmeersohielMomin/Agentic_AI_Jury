@@ -1,0 +1,19 @@
+=== U3-3: Chroma RAG (nomic-embed-text & Grounded Prompt) ===
+
+Query: What is the maximum allowed daily study hours before burnout oversight is required?
+
+--- k=1 Retrieval ---
+Chunks Retrieved: 1
+Chunk 1: 3: Daily Study Load Limits and Burnout Thresholds
+Answer (k=1): Based on the provided context documents, the maximum allowed daily study hours before burnout oversight is required is 6.0 hours.
+
+--- k=3 Retrieval ---
+Chunks Retrieved: 3
+  Chunk 1: 3: Daily Study Load Limits and Burnout Thresholds
+  Chunk 2: 6: Study Scheduling and Cognitive Rest Intervals
+  Chunk 3: Overview
+Answer (k=3): Based on the provided context documents, the maximum allowed daily study hours before burnout oversight is required is 6.0 hours.
+
+--- Grounded Refusal on Unanswerable Query ---
+Query: What is the cafeteria lunch menu or parking rate for exam week?
+Answer: I don't know based on the provided documents.

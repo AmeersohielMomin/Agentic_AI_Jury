@@ -1,0 +1,13 @@
+=== U3-4: Tool & Failure Handling (Defensive Recovery Trace) ===
+
+Test 1: Zero days left input to hours_needed_per_day
+  Status: ERROR
+  Error Type: ZeroOrNegativeDaysLeft
+  Message: Error: days_left must be >= 1 day (received 0). Examination is today or overdue.
+  Suggested Recovery: Switch to emergency high-yield revision mode; cannot space hours across zero days.
+
+Test 2: Overflow topics covered (25/20) input to check_exam_readiness
+  Status: ERROR
+  Error Type: OverflowCoverage
+  Message: Error: topics_covered (25) exceeds total_topics (20). Coverage cannot be greater than 100%.
+  Suggested Recovery: Verify syllabus syllabus size; clamp topics_covered to total_topics.

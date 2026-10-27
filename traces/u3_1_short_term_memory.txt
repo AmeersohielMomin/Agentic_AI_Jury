@@ -1,0 +1,80 @@
+=== U3-1: Short-term Memory (Checkpointer & thread_id) ===
+
+--- WITH MEMORY (Context Retained) ---
+Turn 1 User: I am preparing for the Machine Learning exam. I have covered 12 out of 20 topics and have 4 days left. At 2 hours per topic, what is my schedule?
+Turn 1 AI:   Based on the information provided, you have covered 12 out of 20 topics and have 4 days left. You have 2 hours per topic. To calculate your schedule, you can use the following formula:
+
+\[ \text{Total hours needed} = \text{Number of topics left} \times \text{Hours per topic} \]
+
+\[ \text{Total hours needed} = 8 \times 2 = 16 \text{ hours} \]
+
+So, your schedule for the remaining 4 days should be:
+
+- **Day 1:** 4 hours
+- **Day 2:** 4 hours
+- **Day 3:** 4 hours
+- **Day 4:** 4 hours
+
+This will ensure you cover all the remaining topics within the 4 days.
+
+Turn 2 User: What if the exam is postponed by 2 more days? Recalculate my daily hours.
+Turn 2 AI:   If the exam is postponed by 2 more days, you now have 6 days left to cover the remaining 8 topics. To maintain the same pace of 2 hours per topic, you can calculate the new daily hours as follows:
+
+\[ \text{Total hours needed} = \text{Number of topics left} \times \text{Hours per topic} \]
+
+\[ \text{Total hours needed} = 8 \times 2 = 16 \text{ hours} \]
+
+Now, to distribute these 16 hours over the 6 days:
+
+\[ \text{Daily hours} = \frac{\text{Total hours needed}}{\text{Number of days left}} \]
+
+\[ \text{Daily hours} = \frac{16}{6} \approx 2.67 \text{ hours per day} \]
+
+So, your new schedule for the remaining 6 days should be:
+
+- **Day 1:** 2.67 hours
+- **Day 2:** 2.67 hours
+- **Day 3:** 2.67 hours
+- **Day 4:** 2.67 hours
+- **Day 5:** 2.67 hours
+- **Day 6:** 2.67 hours
+
+This schedule will help you cover all the remaining topics within the new 6-day period.
+
+--- WITHOUT MEMORY (Amnesia Demonstrated) ---
+Turn 1 User: I am preparing for the Machine Learning exam. I have covered 12 out of 20 topics and have 4 days left. At 2 hours per topic, what is my schedule?
+Turn 1 AI:   Based on your current schedule, you have 4 days left to cover the remaining 8 topics. At 2 hours per topic, you will need a total of 16 hours to cover these topics. Therefore, your updated schedule would be:
+
+- **Day 1:** 2 hours on Topic 13
+- **Day 2:** 2 hours on Topic 14
+- **Day 3:** 2 hours on Topic 15
+- **Day 4:** 2 hours on Topic 16
+
+This schedule will allow you to cover all remaining topics within the 4 days you have left.
+
+Turn 2 User: What if the exam is postponed by 2 more days? Recalculate my daily hours.
+Turn 2 AI:   Sure, let's go through the process step by step. 
+
+1. **Identify the original schedule and exam details:**
+   - Let's assume the original schedule was for 10 days, and the exam was originally scheduled for the 10th day.
+   - The exam was postponed by 2 more days.
+
+2. **Calculate the new exam date:**
+   - Original exam date: 10th day
+   - Postponement: 2 days
+   - New exam date: 10th day + 2 days = 12th day
+
+3. **Recalculate the daily hours:**
+   - Original schedule: 10 days
+   - New schedule: 10 days + 2 days = 12 days
+   - Daily hours: Total hours / Total days
+
+4. **Assume a total of 100 hours for the 10 days:**
+   - Total hours: 100 hours
+   - Daily hours: 100 hours / 10 days = 10 hours/day
+
+5. **Apply the new schedule:**
+   - New schedule: 12 days
+   - Daily hours: 100 hours / 12 days = approximately 8.33 hours/day
+
+So, if the exam is postponed by 2 more days, the new daily hours would be approximately 8.33 hours.

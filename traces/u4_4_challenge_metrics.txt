@@ -1,0 +1,9 @@
+=== U4-4: Challenge Analysis (Latency, Error Propagation, Hop Budget) ===
+
+| Case | Scenario Description | TA1 Latency (ms) | TA2 Latency (ms) | TA1 Robustness | TA2 Coordination |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| TC1 | Fully Prepared Student | 0.02 | 40.88 | Deterministic Single-pass | Negotiated (AGREED, 3 hops) |
+| TC2 | Borderline Readiness | 0.01 | 21.18 | Deterministic Single-pass | Negotiated (AGREED, 3 hops) |
+| TC3 | Urgent Catch-up Crunch | 0.0 | 22.66 | Deterministic Single-pass | Negotiated (COUNTERED, 3 hops) |
+| TC4 | Extreme Workload Overload | 0.0 | 21.51 | Deterministic Single-pass | Negotiated (FAILED, 3 hops) |
+| TC5 | Boundary / Zero Days Left | 0.01 | 24.66 | Unhandled Exception (Crash) | Negotiated (FAILED, 3 hops) |
