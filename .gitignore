@@ -56,3 +56,12 @@ Thumbs.db
 
 # Chroma Vector DB runtime persist directory
 ta2/database/chroma_db/
+
+# Swift Package Manager & Xcode Build Artifacts
+.build/
+*.xcuserstate
+xcuserdata/
+DerivedData/
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
+.swiftpm/xcode/xcuserdata/
+
